@@ -104,6 +104,6 @@ app.get('/api/:charName' ,(req,res)=>{
    if(characters[charsName]){
     res.json(characters[charsName])
    }else{
-    res.json(characters[`Rand al'Thor`])
+    res.json(characters[`rand al'thor`])
    }
 })
