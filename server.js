@@ -113,7 +113,7 @@ MongoClient.connect(connectionString)
        infoCollection.find({name : charsName}).toArray()
        .then(result => {
         console.log(result)
-        res.json(result)
+        res.json(result[0])
        })
        .catch(err => console.error(err))
     })
