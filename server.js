@@ -109,7 +109,7 @@ MongoClient.connect(connectionString)
     })
     
     
-    app.get('/api/:charName' ,(req,res)=>{
+    app.get('https://good-cyan-bat.cyclic.app//api/:charName' ,(req,res)=>{
        const charsName = req.params.charName.toLowerCase()
        infoCollection.find({name : charsName}).toArray()
        .then(result => {
