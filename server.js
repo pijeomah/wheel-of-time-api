@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const { response } = require('express')
 const PORT = 8080
 const MongoClient = require('mongodb').MongoClient
 const connectionString = "mongodb+srv://onyedikaij:fSjU4WFZou246z28@cluster0.n6xaokk.mongodb.net/?retryWrites=true&w=majority"
@@ -104,12 +103,12 @@ MongoClient.connect(connectionString)
     const infoCollection = db.collection('character-info')
 
 
-    app.get('https://good-cyan-bat.cyclic.app/', (req,res)=>{
+    app.get('/', (req,res)=>{
         res.sendFile(__dirname + '/index.html')
     })
     
     
-    app.get('https://good-cyan-bat.cyclic.app/api/:charName' ,(req,res)=>{
+    app.get('/api/:charName' ,(req,res)=>{
        const charsName = req.params.charName.toLowerCase()
        infoCollection.find({name : charsName}).toArray()
        .then(result => {
@@ -120,6 +119,8 @@ MongoClient.connect(connectionString)
     })
 })
 .catch(err => console.error(err))
+
+
 app.listen(process.env.PORT || PORT,function(){
     console.log(`Currently listening on ${PORT}`)
 })
