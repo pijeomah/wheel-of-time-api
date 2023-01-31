@@ -104,7 +104,7 @@ MongoClient.connect(connectionString)
     const infoCollection = db.collection('character-info')
 
 
-    app.get('/', (req,res)=>{
+    app.get('https://good-cyan-bat.cyclic.app//', (req,res)=>{
         res.sendFile(__dirname + '/index.html')
     })
     
