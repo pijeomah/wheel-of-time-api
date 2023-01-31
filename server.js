@@ -104,12 +104,12 @@ MongoClient.connect(connectionString)
     const infoCollection = db.collection('character-info')
 
 
-    app.get('https://good-cyan-bat.cyclic.app//', (req,res)=>{
+    app.get('https://good-cyan-bat.cyclic.app/', (req,res)=>{
         res.sendFile(__dirname + '/index.html')
     })
     
     
-    app.get('https://good-cyan-bat.cyclic.app//api/:charName' ,(req,res)=>{
+    app.get('https://good-cyan-bat.cyclic.app/api/:charName' ,(req,res)=>{
        const charsName = req.params.charName.toLowerCase()
        infoCollection.find({name : charsName}).toArray()
        .then(result => {
