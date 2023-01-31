@@ -7,7 +7,7 @@ const MongoClient = require('mongodb').MongoClient
 const connectionString = "mongodb+srv://onyedikaij:fSjU4WFZou246z28@cluster0.n6xaokk.mongodb.net/?retryWrites=true&w=majority"
 
 // const characters = {
-//     "Rand alThor":{
+//     "rand":{
 //         'characterName' : "Rand al'Thor",
 //         'birthPlace' : 'Dragonmount',
 //         'nationality': 'Andoran',
@@ -16,7 +16,7 @@ const connectionString = "mongodb+srv://onyedikaij:fSjU4WFZou246z28@cluster0.n6x
 //         'abilities': ['Swordmaster', 'Channeling'],
 //         'image': 'https://static.wikia.nocookie.net/wot/images/2/28/Rand_2.jpg/revision/latest?cb=20101025153809'
 //     },
-//     'Mat Cauthon': {
+//     'mat': {
 //         'characterName' : 'Matrim Cauthon',
 //         'birthPlace' : 'Emond\'s Field',
 //         'nationality': 'Andoran',
